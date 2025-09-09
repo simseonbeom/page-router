@@ -10,11 +10,11 @@ function Page() {
 
   const router = useRouter();
 
-  console.log(router);
+  const query = router.query.id;
   
 
   return (
-    <div>Page</div>
+    <div>Page {query} </div>
   )
 }
 export default Page

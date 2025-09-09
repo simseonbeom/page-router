@@ -5,6 +5,11 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   turbopack:{
     root: __dirname // 현재 디렉토리 root 설정
+  },
+  images:{
+    remotePatterns:[
+      {protocol:'https', hostname:'picsum.photos', pathname:'/**'}
+    ]
   }
 };
 
