@@ -1,8 +1,41 @@
 import Head from "next/head"
 import Footer from "./Footer"
 import Header from "./Header"
+import { useEffect, useRef } from "react"
+
 
 function GlobalLayout({children}:{children:React.ReactNode}) {
+  const initialized = useRef(false);
+
+  useEffect(()=>{
+    if(initialized.current) return;
+    let smoother;
+    
+    (async () => {
+
+      if(typeof window === 'undefined') return;
+
+      try{
+        const gsap = (await import('gsap')).default;
+        const { ScrollTrigger } = await import('gsap/dist/ScrollTrigger')
+        const { ScrollSmoother } = await import('gsap/dist/ScrollSmoother')
+
+        
+
+      }
+
+      catch{
+
+      }
+      
+
+    })()
+
+    return () => {}
+
+  })
+
+
   return (
     <>
       <Head>
